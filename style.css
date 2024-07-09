@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --bg-color: #D8DFE8;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 40px;
+    height: 100vh;
+    box-sizing: border-box;
+    background: var(--bg-color);
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    height: 48px;
+}
+
+.left-container,
+.right-container {
+    height: 100%;
+}
+
+.left-container {
+    width: 50%;
+}
+
+.text-area {
+    font-size: 32px;
+    box-sizing: border-box;
+    margin: 12% 0 16px 0;
+    min-height: 55%;
+    max-height: 70%;
+    width: 100%;
+    resize: none;
+    border: none;
+    background-color: var(--bg-color);
+}
+
+.input-text {
+    height: 100%;
+}
+
+.warning-container {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    align-items: center;
+    color: #9B9797;
+}
+
+.warning-container img {
+    width: 16px;
+    height: 16px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 32px 0;
+}
+
+.encrypt,
+.decrypt {
+    width: 328px;
+    height: 67px;
+    border: #0A3871 1px solid;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
+.encrypt {
+    background-color: #0A3871;
+    color: white;
+}
+
+.decrypt {
+    color: #0A3871;
+}
+
+.right-container {
+    background-color: white;
+    display: flex;
+    width: 30%;
+    border-radius: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.doll {
+    display: grid;
+    row-gap: 32px;
+}
+
+.doll img {
+    width: 336px;
+    height: 304px;
+}
+
+.msg {
+    font-size: 16px;
+    width: 336px;
+    text-align: center;
+}
+
+.msg span {
+    font-size: 24px;
+    font-weight: bold;
+}
