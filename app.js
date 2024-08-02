@@ -1,13 +1,15 @@
-const parrafo = document.querySelector(".editable_text")
+document.addEventListener('DOMContentLoaded', (event) => {
+    const textArea = document.querySelector('.text-area');
+    const maxHeight = parseInt(window.getComputedStyle(textArea).maxHeight);
 
-parrafo.addEventListener('click', () => {
-    if (parrafo.innerText === 'Ingrese el texto aqui') {
-        parrafo.innerText = '';
-    }
-});
+    textArea.addEventListener('input', autoResize, false);
 
-parrafo.addEventListener('blur', () => {
-    if (parrafo.innerText.trim() === '') {
-        parrafo.innerText = 'Ingrese el texto aqui';
+    function autoResize() {
+        if (this.scrollHeight > maxHeight) {
+            this.value = this.value.slice(0, -1); // Eliminar el último caracter
+        } else {
+            this.style.height = 'auto'; // Resetear la altura
+            this.style.height = this.scrollHeight + 'px'; // Ajustar a la altura del contenido
+        }
     }
 });

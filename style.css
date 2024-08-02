@@ -1,7 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --bg-color: #D8DFE8;
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
 }
 
 * {
@@ -11,56 +27,24 @@
 }
 
 body {
-    display: flex;
-    padding: 40px;
-    height: 100vh;
-    box-sizing: border-box;
-    background: var(--bg-color);
-    justify-content: space-between;
+    max-width: 1920px;
+    background: var(--light-blue-100);
 }
-
-.logo {
-    width: 120px;
-    height: 48px;
-}
-
-.left-container,
-.right-container {
-    height: 100%;
-}
-
-.left-container {
-    width: 50%;
-}
-
 
 .text-area {
-    color: #0A3871;
-    font-size: 32px;
-    box-sizing: border-box;
-    margin: 12% 0 16px 0;
-    min-height: 55%;
-    max-height: 70%;
-    width: 100%;
+    color: var(--dark-blue-300);
+    font-size: 2rem;
+    line-height: 1.5;
     resize: none;
     border: none;
-    background-color: var(--bg-color);
+    outline: none;
+    overflow: hidden;
+    background-color: transparent;
+    caret-color: var(--dark-blue-300);
 }
 
 .text-area::placeholder {
-    color: #0A3871;
-}
-
-.input-text {
-    height: 100%;
-}
-
-.warning-container {
-    display: flex;
-    gap: 8px;
-    font-size: 12px;
-    align-items: center;
-    color: #9B9797;
+    color: var(--dark-blue-300);
 }
 
 .warning-container img {
@@ -68,57 +52,202 @@ body {
     height: 16px;
 }
 
-.buttons {
-    width: 100%;
+.warning-container {
     display: flex;
-    justify-content: space-between;
-    margin: 16px 0 32px 0;
-}
-
-.encrypt,
-.decrypt {
-    width: 328px;
-    height: 67px;
-    border: #0A3871 1px solid;
-    border-radius: 24px;
-    font-size: 16px;
-}
-
-.encrypt {
-    background-color: #0A3871;
-    color: white;
-}
-
-.decrypt {
-    color: #0A3871;
+    gap: 8px;
+    height: 18px;
+    font-size: 0.75rem;
+    align-items: center;
+    color: var(--gray-400);
 }
 
 .right-container {
     background-color: white;
-    display: flex;
-    width: 30%;
     border-radius: 32px;
-    justify-content: center;
-    align-items: center;
-}
-
-.doll {
-    display: grid;
-    row-gap: 32px;
-}
-
-.doll img {
-    width: 336px;
-    height: 304px;
-}
-
-.msg {
-    font-size: 16px;
-    width: 336px;
-    text-align: center;
 }
 
 .msg span {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: var(--gray-500);
+}
+
+.msg {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--gray-400);
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        display: flex;
+        box-sizing: border-box;
+        padding: 40px;
+        height: 1024px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 120px;
+        height: 48px;
+        content: url("./assests/Logo.png");
+    }
+
+    .left-container,
+    .right-container {
+        height: 944px;
+    }
+
+    .left-container {
+        width: 680px;
+        position: relative;
+    }
+
+    .text-area {
+        width: 100%;
+        max-height: 667px;
+        position: absolute;
+        top: 128px;
+    }
+
+    .warning-container {
+        position: absolute;
+        top: 811px;
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 845px;
+    }
+
+    .encrypt,
+    .decrypt {
+        width: 328px;
+        height: 67px;
+        border: var(--dark-blue-300) 1px solid;
+        border-radius: 24px;
+        font-size: 16px;
+    }
+
+    .decrypt {
+        color: var(--dark-blue-300);
+        background-color: #D8DFE8;
+    }
+
+    .right-container {
+        box-shadow: 0 24px 32px -8px var(--gray-100);
+        display: flex;
+        width: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .doll {
+        display: grid;
+        row-gap: 32px;
+    }
+
+    .doll img {
+        width: 336px;
+        height: 304px;
+        content: url("./assests/Muñeco.png");
+    }
+
+    .msg {
+        width: 336px;
+        height: 122px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+    body{
+        box-sizing: border-box;
+        padding: 40px;
+        height: 100vh;
+    }
+
+    .logo {
+        width: 31.09px;
+        height: 50.58px;
+        margin-top: 33.42px;
+        content: url("./assests/Group\ 3.png");
+    }
+
+    .left-container{
+        width: 688px;
+        height: 813px;
+        margin-bottom: 61px;
+        position: relative;
+    }
+
+    .text-area{
+        width: 100%;
+        max-height: 528px;
+        position: absolute;
+        top: 116px;
+    }
+
+    .warning-container {
+        position: absolute;
+        top: 712px;
+    }
+
+    .buttons {
+        width: 688px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 746px;
+    }
+
+    .encrypt,
+    .decrypt {
+        width: 332px;
+        height: 67px;
+        border: var(--dark-blue-300) 1px solid;
+        border-radius: 24px;
+        font-size: 16px;
+    }
+
+    .right-container {
+        box-shadow: 0 24px 32px -8px var(--gray-100);
+        display: flex;
+        width: 688px;
+        height: 133px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .doll {
+        width: 688px;
+        height: 133px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .doll img {
+        display: none;
+    }
+
+    .msg {
+        width: 624px;
+        height: 69px;
+    }
+}
+
+.encrypt {
+    color: white;
+    background-color: var(--dark-blue-300);
+}
+
+@media only screen and (max-width: 1439px) {
+    .decrypt {
+        color: var(--dark-blue-300);
+        background-color: transparent;
+    }
 }
