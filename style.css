@@ -33,7 +33,9 @@ body {
     width: 50%;
 }
 
+
 .text-area {
+    color: #0A3871;
     font-size: 32px;
     box-sizing: border-box;
     margin: 12% 0 16px 0;
@@ -43,6 +45,10 @@ body {
     resize: none;
     border: none;
     background-color: var(--bg-color);
+}
+
+.text-area::placeholder {
+    color: #0A3871;
 }
 
 .input-text {
