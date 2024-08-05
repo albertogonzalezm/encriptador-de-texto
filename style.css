@@ -61,6 +61,14 @@ body {
     color: var(--gray-400);
 }
 
+.encrypt,
+.decrypt {
+    height: 67px;
+    border: var(--dark-blue-300) 1px solid;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
 .right-container {
     background-color: white;
     border-radius: 32px;
@@ -83,7 +91,6 @@ body {
         display: flex;
         box-sizing: border-box;
         padding: 40px;
-        height: 1024px;
         justify-content: space-between;
     }
 
@@ -126,10 +133,6 @@ body {
     .encrypt,
     .decrypt {
         width: 328px;
-        height: 67px;
-        border: var(--dark-blue-300) 1px solid;
-        border-radius: 24px;
-        font-size: 16px;
     }
 
     .decrypt {
@@ -164,10 +167,11 @@ body {
 
 @media (min-width: 768px) and (max-width: 1439px) {
 
-    body{
+    body {
         box-sizing: border-box;
         padding: 40px;
         height: 100vh;
+        min-height: 1174px;
     }
 
     .logo {
@@ -177,14 +181,14 @@ body {
         content: url("./assests/Group\ 3.png");
     }
 
-    .left-container{
-        width: 688px;
+    .left-container {
+        width: 100%;
         height: 813px;
         margin-bottom: 61px;
         position: relative;
     }
 
-    .text-area{
+    .text-area {
         width: 100%;
         max-height: 528px;
         position: absolute;
@@ -197,7 +201,7 @@ body {
     }
 
     .buttons {
-        width: 688px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         position: absolute;
@@ -206,37 +210,23 @@ body {
 
     .encrypt,
     .decrypt {
-        width: 332px;
-        height: 67px;
-        border: var(--dark-blue-300) 1px solid;
-        border-radius: 24px;
-        font-size: 16px;
+        width: 48.25%;
     }
 
     .right-container {
         box-shadow: 0 24px 32px -8px var(--gray-100);
+        width: 100%;
         display: flex;
-        width: 688px;
-        height: 133px;
+        min-height: 133px;
         justify-content: center;
         align-items: center;
-    }
-
-    .doll {
-        width: 688px;
-        height: 133px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .doll img {
-        display: none;
+        box-sizing: border-box;
+        padding: 32px;
     }
 
     .msg {
-        width: 624px;
-        height: 69px;
+        min-width: 624px;
+        min-height: 69px;
     }
 }
 
@@ -249,5 +239,67 @@ body {
     .decrypt {
         color: var(--dark-blue-300);
         background-color: transparent;
+    }
+
+    .doll img {
+        display: none;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+    body{
+        min-height: 933px;
+        height: 100vh;
+        margin: 16px;
+    }
+
+    .logo {
+        margin-top: 24px;
+        content: url("./assests/Top.png");
+    }
+
+    .left-container {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    .text-area {
+        width: 100%;
+        max-height: 528px;
+    }
+
+    .warning-container {
+    }
+
+    .buttons {
+        width: 100%;
+        height: 158px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .encrypt,
+    .decrypt {
+        width: 100%;
+    }
+
+    .right-container {
+        box-shadow: 0 24px 32px -8px var(--gray-100);
+        min-width: 327px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 32px;
+    }
+
+
+
+    .msg {
+        min-width: 263px;
     }
 }
